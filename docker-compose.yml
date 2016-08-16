@@ -18,11 +18,14 @@ mysql:
     image: mysql:latest
     volumes_from:
         - data
+    ports:
+        - 3306:3306
     environment:
         MYSQL_ROOT_PASSWORD: secret_pwd
-        MYSQL_DATABASE: project
+        MYSQL_DATABASE: projet
         MYSQL_USER: project_user
         MYSQL_PASSWORD: project_pwd
+
 phpmyadmin:
     image: phpmyadmin/phpmyadmin
     ports:
@@ -31,6 +34,7 @@ phpmyadmin:
         - mysql
     environment:
         PMA_HOST: mysql
+
 app:
     image: php:7.0-fpm
     volumes:

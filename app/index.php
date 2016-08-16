@@ -7,7 +7,7 @@
     <body>
         <img src="http://blog.osteel.me/images/2015/12/18/docker-tutorial2.gif" alt="Hello World!" />
         <?php
-        $database   = "project";
+        $database   = "projet";
         $user = "project_user";
         $password = "project_pwd";
         $host       = "mysql";
