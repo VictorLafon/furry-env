@@ -9,9 +9,11 @@ echo ''
 echo "$(tput setaf 2)2.1 Create the folder for the mount$(tput sgr0)"
 docker-machine ssh furry mkdir $(docker-machine ssh furry pwd)/app
 docker-machine ssh furry sudo mount -t vboxsf app /home/docker/app
-# echo ''
-# echo "$(tput setaf 2)3.Start docker compose$(tput sgr0)"
-# docker-compose up -d
+echo ''
+echo "$(tput setaf 2)3.Start docker compose$(tput sgr0)"
+docker-compose up -d
+#Créer les dossier /var/www/cache et /var/www/logs et leur mettre comme droit 777
+
 # echo ''
 # echo "$(tput setaf 2)4.Copy app folder to the docker-machine so it can be linked to the containers$(tput sgr0)"
 # docker-machine ssh furry mkdir $(docker-machine ssh magisystem pwd)/app
